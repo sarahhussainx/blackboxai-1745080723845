@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task List with Calendar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+  <header class="mb-6 flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-gray-800">Task List with Calendar</h1>
+    <a href="/" class="text-blue-600 hover:underline flex items-center space-x-2">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+  </header>
+
+  <main class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">Add New Task</h2>
+      <form id="taskForm" class="flex flex-col space-y-4">
+        <input type="text" id="title" placeholder="Task Title" required class="border border-gray-300 rounded px-3 py-2" />
+        <textarea id="description" placeholder="Task Description" class="border border-gray-300 rounded px-3 py-2"></textarea>
+        <input type="date" id="due_date" class="border border-gray-300 rounded px-3 py-2" />
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add Task</button>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Tasks</h2>
+      <div id="calendar" class="mb-6"></div>
+      <ul id="taskList" class="space-y-2"></ul>
+    </section>
+  </main>
+
+  <script src="js/tasks.js"></script>
+</body>
+</html>
