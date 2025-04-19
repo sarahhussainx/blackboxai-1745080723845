@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro Timer - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-800">Pomodoro Timer</h1>
+  </header>
+
+  <main class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+    <div id="timer" class="text-center text-6xl font-mono mb-6">25:00</div>
+    <div class="flex justify-center space-x-4 mb-6">
+      <button id="startBtn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition">Start</button>
+      <button id="pauseBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded transition">Pause</button>
+      <button id="resetBtn" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded transition">Reset</button>
+    </div>
+    <div class="text-center text-gray-600">Focus for 25 minutes, then take a 5-minute break.</div>
+  </main>
+
+  <footer class="mt-12">
+    <a href="/tasks" class="text-blue-600 hover:underline flex items-center space-x-2">
+      <i class="fas fa-tasks"></i>
+      <span>Go to Task List</span>
+    </a>
+  </footer>
+
+  <script src="js/pomodoro.js"></script>
+</body>
+</html>
